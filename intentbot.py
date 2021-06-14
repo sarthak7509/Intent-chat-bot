@@ -56,7 +56,9 @@ if __name__ == '__main__':
 
     path = "intent-bot-data/bot_model"
     bot = intentBot(json_data=data,words=words,labels=labels,training=training,output=output,model_Path=path)
+    
+    question = input("What you wanna ask me?:- ")
 
-    response,intent = bot.predict("how are you")
+    response,intent = bot.predict(question)
     print(response)
     print(intent)
