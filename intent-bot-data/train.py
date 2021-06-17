@@ -12,7 +12,7 @@ tf.get_logger().setLevel('ERROR')
 import json
 import pickle
 
-with open('intent.json') as f:
+with open('intent-bot-data\intent.json') as f:
     data = json.load(f)
 words = []
 labels = []
@@ -60,7 +60,7 @@ training = np.array(training)
 output = np.array(output)
 print(len(training[0]))
 # print(output)
-with open("Outputs/data.pickle", "wb") as f:
+with open("intent-bot-data\outputs\data.pickle", "wb") as f:
     pickle.dump((words, labels, training, output), f)
 
 model = tf.keras.Sequential()
