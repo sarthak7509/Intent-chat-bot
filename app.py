@@ -14,7 +14,6 @@ from intentbot import intentBot
 
 model2 = None
 app = Flask(__name__)
-
 CORS(app)
 
 with open("intent-bot-data/intent.json") as file:
@@ -53,4 +52,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5500)
+    app.run(host='0.0.0.0')

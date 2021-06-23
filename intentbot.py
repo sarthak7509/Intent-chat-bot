@@ -1,4 +1,5 @@
 import nltk
+nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 import os
@@ -9,7 +10,6 @@ tf.get_logger().setLevel('ERROR')
 import random
 import json
 import pickle
-
 class intentBot:
     def __init__(self, json_data, words, labels, training, output, model_Path):
         super(intentBot, self).__init__()
