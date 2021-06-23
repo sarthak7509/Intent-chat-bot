@@ -1,9 +1,10 @@
-import nltk
-nltk.download('punkt')
-from nltk.stem.lancaster import LancasterStemmer
-stemmer = LancasterStemmer()
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+NLTK_DIR = "punkt"
+os.environ['NLTK_DATA'] = NLTK_DIR
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
 import numpy as np
 import tensorflow as tf
 tf.get_logger().setLevel('ERROR')
